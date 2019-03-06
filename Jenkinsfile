@@ -11,7 +11,7 @@ pipeline {
     stage('Checkout') {
       steps {
         checkout scm
-        sh 'echo $SVC_ACCOUNT_KEY | base64 -d > terraform.tfvars'
+        sh 'echo $SVC_ACCOUNT_KEY | base64 -D > terraform.tfvars'
         
         
       }
