@@ -12,8 +12,6 @@ pipeline {
       steps {
         checkout scm
         sh 'echo $SVC_ACCOUNT_KEY | base64 -D > terraform.tfvars'
-        sh '${WORKSPACE}'
-        
         
       }
     }
